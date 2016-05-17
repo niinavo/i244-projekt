@@ -1,0 +1,15 @@
+body{
+	background-color:darkorchid;
+}
+
+#menu {margin:0px; padding:0px; background:crimson;}
+#menu li {display:inline-block;}
+#menu a {color: white; text-transform:uppercase; font-weight:bold; display:inline-block; padding: 5px; text-decoration:none;}
+#menu a:hover {color:grey;}
+#wrap {width:600px; margin:auto; background:white;}
+#content{padding:10px;}
+.validaator {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
