@@ -1,15 +1,36 @@
 body{
-	background-color:darkorchid;
+	background-image: url("../pildid/to-do-list2.jpg");
+    background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
-#menu {margin:0px; padding:0px; background:crimson;}
-#menu li {display:inline-block;}
-#menu a {color: white; text-transform:uppercase; font-weight:bold; display:inline-block; padding: 5px; text-decoration:none;}
-#menu a:hover {color:grey;}
-#wrap {width:600px; margin:auto; background:white;}
-#content{padding:10px;}
-.validaator {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
+
+#menu {
+	margin:0px; padding:0px; 
+	background:crimson;
+}
+#menu li {
+	display:inline-block;
+}
+#menu a {
+	color: white; 
+	text-transform:uppercase; 
+	font-weight:bold; 
+	display:inline-block; 
+	padding: 5px; 
+	text-decoration:none;
+}
+#menu a:hover {
+	color:yellow;
+}
+#wrap {
+    margin: 25% 50% 50% 25%;
+	width:600px; 
+	background-color: rgba(221, 160, 221,0.5);
+	border: hidden;
+	border-radius: 15pt;
+}
+#content{
+	padding:10px;
 }
