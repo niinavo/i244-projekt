@@ -16,6 +16,7 @@ Aine "Võrgurakendused I" projekt: Kinoseansside piletite broneerimine
 
 ## Märkused
 Andmebaasis on järgmised tabelid:
+
 1. Kasutajate tabel '10153400___kasutajad':  'Kasutaja_id', 'Kasutajanimi', 'Parool', 'Lisatud'
 1. Kinoseansside tabel  '10153400___kinoseansid': 'Kinoseansi_id', 'Kinoseansi_nimetus', 'Algusaeg', 'Kohti_kokku'
 1. Broneeringute tabel '10153400___broneeringud': 'Broneeringu_id', 'Kinoseansi_id_b', 'Kasutaja_id_b', 'Broneeritud_piletite_hulk'
