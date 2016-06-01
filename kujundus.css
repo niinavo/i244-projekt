@@ -1,0 +1,16 @@
+#lisa-vorm-vaade {
+    display: none;
+    border: 2px solid blue;
+    padding: 10px;
+	background-color: #b3b3ff;
+	border-radius: 5px;
+}
+			
+.message{
+	border: 1px solid blue; 
+	background: #EEE;
+}
+
+.logoutbutton{
+	float: right
+}
