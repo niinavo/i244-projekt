@@ -13,7 +13,8 @@
 	    global $l;
 		$max = 10;
 		$start = ($page - 1) * $max;
-		$query = 'SELECT Kinoseansi_id, Kinoseansi_nimetus, Algusaeg, Kohti_kokku-IFNULL(SUM(Broneeritud_piletite_hulk),0) as vabu_kohti FROM 10153400___kinoseansid 
+		$query = 'SELECT Kinoseansi_id, Kinoseansi_nimetus, Algusaeg, Kohti_kokku-COALESCE(SUM(Broneeritud_piletite_hulk),0) as vabu_kohti 
+		FROM 10153400___kinoseansid 
 		LEFT JOIN 10153400___broneeringud 
 		ON Kinoseansi_id=Kinoseansi_id_b 
 		GROUP BY Kinoseansi_id 
@@ -116,7 +117,8 @@
 	
 	function model_gobooking($kinoseansi_id, $aeg) {
 		global $l;	
-		$query = 'SELECT Kinoseansi_id, Kinoseansi_nimetus, Algusaeg, Kohti_kokku-IFNULL(SUM(Broneeritud_piletite_hulk),0) as vabu_kohti FROM 10153400___kinoseansid 
+		$query = 'SELECT Kinoseansi_id, Kinoseansi_nimetus, Algusaeg, Kohti_kokku-COALESCE(SUM(Broneeritud_piletite_hulk),0) as vabu_kohti
+		FROM 10153400___kinoseansid 
 		LEFT JOIN 10153400___broneeringud 
 		ON Kinoseansi_id=Kinoseansi_id_b
 		WHERE Kinoseansi_id = ? 
