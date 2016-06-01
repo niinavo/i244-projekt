@@ -1,5 +1,5 @@
 ﻿# i244-projekt
-Aine "Võrgurakendused I" projekt: Kinoseansside piletite broneerimine
+Aine "Võrgurakendused I" projekt: kinoseansside piletite broneerimine
 
 ## Ülesande kirjeldus
 Ülesandeks on luua lihtne kinoseansside piletite broneerimise süsteem, kus registreeritud kasutaja saab vaadata olemasolevaid kinoseansse ning broneerida pileteid
