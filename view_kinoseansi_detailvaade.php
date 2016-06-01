@@ -8,6 +8,8 @@
 	
     <body>
 	    
+		<div id="wrap">
+		<h1 class="appheading">Kinoseansside piletite <br> broneerimise süsteem</h1>
 		<?php foreach (message_list() as $message):?>
 		    <p class="message">
 			    <?= $message; ?>
@@ -19,7 +21,7 @@
 			    <input type="hidden" name="action" value="logout">
 				<input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']; ?>">
 				
-				<button type="submit">Logi välja</button>
+				<button type="submit">Logige välja!</button>
 			</form>
 		</div>
 		
@@ -72,7 +74,7 @@
 					</tr>
 					<tr>
                         <td>
-                            <input type="number" id="piletid" name="piletid">
+                            <input type="number" id="piletid" name="piletid" min="1" max="1000" step="1">
                         </td>
                     </tr>
                 </table>
@@ -86,6 +88,7 @@
         </div>
 
         <script src="kino.js"></script>
+		</div>
     </body>
 
 </html>

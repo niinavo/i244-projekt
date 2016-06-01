@@ -8,6 +8,8 @@
 	
     <body>
 	    
+		<div id="wrap">
+		<h1 class="appheading">Kinoseansside piletite <br> broneerimise süsteem</h1>
 		<?php foreach (message_list() as $message):?>
 		    <p class="message">
 			    <?= $message; ?>
@@ -18,7 +20,7 @@
 		    <form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
 			    <input type="hidden" name="action" value="logout">
 				<input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']; ?>">
-				<button type="submit">Logi välja</button>
+				<button type="submit">Logige välja!</button>
 			</form>
 		</div>
 		
@@ -33,33 +35,33 @@
 				<input type="hidden" name="action" value="add">
 				<input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']; ?>">
 				<p>
-				    <button type="button" id="peida-lisa-vorm">Peida kinoseanside sisestamise vorm</button>
+				    <button type="button" id="peida-lisa-vorm">Peida kinoseansside sisestamise vorm</button>
 				</p>
-				<h2>Lisa kinoseanss kinokavasse</h2>
+				<h2>Lisage kinoseanss kinokavasse</h2>
 
 				<table>
                     <tr>
-                        <td>Kinoseansi nimetus</td>
+                        <td>Kinoseansi nimetus:</td>
                         <td>
                             <input type="text" id="nimetus" name="nimetus">
                         </td>
                     </tr>
 					<tr>
-                        <td>Kinoseansi algusaeg</td>
+                        <td>Kinoseansi algusaeg:</td>
                         <td>
                             <input type="datetime-local" id="aeg" name="aeg">
                         </td>
                     </tr>
                     <tr>
-                        <td>Kohtade arv</td>
+                        <td>Kohtade arv:</td>
                         <td>
-                            <input type="number" id="kohad" name="kohad">
+                            <input type="number" id="kohad" name="kohad" min="1" max="1000" step="1">
                         </td>
                     </tr>
                 </table>
 				
 				<p>
-                    <button type="submit" id="lisa-nupp">Lisa kinoseanss</button>
+                    <button type="submit" id="lisa-nupp">Lisage kinoseanss!</button>
 				</p>
 				
             </form>
@@ -128,6 +130,7 @@
 		</p>
 
         <script src="kino.js"></script>
+		</div>
     </body>
 
 </html>

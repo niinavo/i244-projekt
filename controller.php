@@ -15,7 +15,7 @@
 			return false;
 		}
 		if ( model_user_add($kasutajanimi, $parool) ) {
-			message_add('Teie konto on registreeritud');
+			message_add('Teie konto on registreeritud!');
 			return true;
 		}
 		message_add('Konto registreerimine ebaõnnestus, kasutajanimi võib olla juba võetud!');
@@ -69,7 +69,7 @@
 			message_add('Valisite kinoseansi '.$kinoseansi_id.'!');
 			return true;
 		}		
-		message_add('Kinoseansi pileti(te) broneerimine ebaõnnestus');
+		message_add('Kinoseansi pileti broneerimine ebaõnnestus');
 		return false;		
 	}
 	
@@ -81,7 +81,7 @@
 		}		
 		$vabad_kohad = model_gobooking($kinoseansi_id);
 		if ($piletid <= 0 || $kinoseansi_id <= 0 || $vabad_kohad['kohad']<$piletid) {
-			message_add('Broneeritavate piletite hulk ei tohi ületada vabade kohtade arvu ja piletite arv peab olema positiivne');
+			message_add('Broneeritavate piletite hulk ei tohi ületada vabade kohtade arvu ja piletite arv peab olema positiivne!');
 			return false;
 		}	
 		if ( model_booking($kinoseansi_id, $piletid) ) {
@@ -102,7 +102,7 @@
 		}
 		// kontrollime, kas sisendväärtused on oodatud kujul või mitte
 		if ($aeg == '' || $nimetus == '' || $kohad <= 0 || $aeg < $sysdate ) {
-			message_add('Sisestatud sisendandmed on vigased! Kõik vormilahtrid peavad olema täidetud ja kinoseansi algusaeg ei tohi olla möödunud!');
+			message_add('Sisestatud andmed on vigased! Kõik vormi lahtrid peavad olema täidetud ja kinoseansi algusaeg ei tohi olla möödunud!');
 			return false;
 		}
 		if ( model_add($nimetus, $aeg, $kohad) ) {

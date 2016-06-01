@@ -9,13 +9,15 @@
     </head>
 	
     <body>
-	
+	    
+		<div id="wrap">
         <?php foreach (message_list() as $message):?>
 		    <p class="message">
 			    <?= $message; ?>
 			</p>
 		<?php endforeach; ?>
 		
+		<h1 class="appheading">Kinoseansside piletite <br> broneerimise süsteem</h1>
 		<h1>Registreerimise vorm</h1>
 		
 		<form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
@@ -44,7 +46,7 @@
 			</p>
 		
 		</form>
-    
+    </div>
 	</body>
 
 </html>
