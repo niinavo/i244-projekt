@@ -19,4 +19,4 @@ Andmebaasis on järgmised tabelid:
 
 1. Kasutajate tabel:  'Kasutaja_id', 'Kasutajanimi', 'Parool', 'Lisatud'
 1. Kinoseansside tabel: 'Kinoseansi_id', 'Kinoseansi_nimetus', 'Algusaeg', 'Kohti_kokku'
-1. Broneeringute tabel: 'Broneeringu_id', 'Kinoseansi_id_b', 'Kasutaja_id_b', 'Broneeritud_piletite_hulk'
+1. Broneeringute tabel: 'Broneeringu_id', 'Kinoseansi_id_b', 'Broneeritud_piletite_hulk'
